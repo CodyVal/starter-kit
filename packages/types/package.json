@@ -1,0 +1,15 @@
+{
+  "name": "@repo/types",
+  "version": "1.0.0",
+  "main": "index.js",
+  "exports": {
+    "./supabase": "./src/supabase.d.ts"
+  },
+  "scripts": {
+    "types:generate": "supabase gen types typescript --local > src/supabase.d.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@repo/triggers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "trigger deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "sideEffects": false,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "@trigger.dev/sdk": "^3.0.5"
+  },
+  "devDependencies": {
+    "@repo/types": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@trigger.dev/build": "^3.0.5",
+    "@types/node": "^22.5.5",
+    "trigger.dev": "^3.0.5"
+  }
+}

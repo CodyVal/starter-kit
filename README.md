@@ -1,84 +1,50 @@
-# Turborepo starter
+# CodyVal Starter Kit
 
-This is an official starter Turborepo.
+This is a comprehensive starter kit for building modern web applications, powered by the following tools and technologies:
 
-## Using this example
+## Core Framework
 
-Run the following command:
+- [Next.js](https://nextjs.org/) - React framework for production-grade applications
 
-```sh
-npx create-turbo@latest
-```
+## Styling
 
-## What's inside?
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 
-This Turborepo includes the following packages/apps:
+## Development & Build
 
-### Apps and Packages
+- [Turborepo](https://turbo.build/) - High-performance build system for JavaScript/TypeScript monorepos
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+## Authentication & User Management
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- [Clerk](https://clerk.com/) - Complete user management and authentication solution
 
-### Utilities
+## Database & Backend
 
-This Turborepo has some additional tools already setup for you:
+- [Supabase](https://supabase.com/) - Open source Firebase alternative with PostgreSQL database
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## Email
 
-### Build
+- [Resend](https://resend.com/) - Email API for developers
 
-To build all apps and packages, run the following command:
+## Payments
 
-```
-cd my-turborepo
-pnpm build
-```
+- [Stripe](https://stripe.com/) - Payment processing platform
 
-### Develop
+## Background Jobs & Automation
 
-To develop all apps and packages, run the following command:
+- [Trigger.dev](https://trigger.dev/) - Background jobs and workflow automation
 
-```
-cd my-turborepo
-pnpm dev
-```
+## Deployment
 
-### Remote Caching
+- [Vercel](https://vercel.com/) - Platform for deploying and hosting web applications
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+# Setup
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+To use this starter kit, you'll need to configure Clerk to work with Supabase. This involves setting up webhooks and proper authentication sync between the two services. Follow the official integration [guide](https://supabase.com/partners/integrations/clerk) here:
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+## Supabase Type Generation
 
-```
-cd my-turborepo
-npx turbo login
-```
+To keep your TypeScript types in sync with your Supabase database schema, you'll need to periodically regenerate the types. This is important whenever you make changes to your database structure.
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+Run the following command to generate updated types:
+`pnpm run types:generate`
