@@ -1,3 +1,4 @@
+import { EmailMeButton } from './_components/email-me-button'
 import { TaskButton } from './_components/task-button'
 import { auth } from '@trigger.dev/sdk/v3'
 
@@ -6,6 +7,7 @@ export default async function Home() {
   return (
     <div>
       <TaskButton publicAccessToken={triggerToken} />
+      <EmailMeButton />
     </div>
   )
 }
