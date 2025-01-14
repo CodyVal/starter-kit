@@ -34,54 +34,7 @@ export type Database = {
   }
   public: {
     Tables: {
-      keep_alive: {
-        Row: {
-          name: string
-          updated_at: string
-        }
-        Insert: {
-          name?: string
-          updated_at?: string
-        }
-        Update: {
-          name?: string
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      users: {
-        Row: {
-          created_at: string
-          email: string | null
-          first_name: string | null
-          id: string
-          image_url: string | null
-          last_active_at: string | null
-          last_name: string | null
-          updated_at: string | null
-        }
-        Insert: {
-          created_at?: string
-          email?: string | null
-          first_name?: string | null
-          id: string
-          image_url?: string | null
-          last_active_at?: string | null
-          last_name?: string | null
-          updated_at?: string | null
-        }
-        Update: {
-          created_at?: string
-          email?: string | null
-          first_name?: string | null
-          id?: string
-          image_url?: string | null
-          last_active_at?: string | null
-          last_name?: string | null
-          updated_at?: string | null
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never

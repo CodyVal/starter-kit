@@ -11,8 +11,8 @@
     "webhooks": "pnpm run webhook:clerk"
   },
   "dependencies": {
-    "@repo/email-templates": "workspace:*",
     "@clerk/nextjs": "^6.9.6",
+    "@repo/email-templates": "workspace:*",
     "@repo/triggers": "workspace:*",
     "@repo/types": "workspace:*",
     "@supabase/supabase-js": "^2.47.10",
@@ -23,6 +23,7 @@
     "react-dom": "^19.0.0",
     "resend": "^4.0.1",
     "server-only": "^0.0.1",
+    "stripe": "^17.5.0",
     "svix": "^1.44.0"
   },
   "devDependencies": {

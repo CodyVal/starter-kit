@@ -1,5 +1,6 @@
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
+import Script from 'next/script'
 
 export default function MainLayout({
   children,
@@ -17,6 +18,7 @@ export default function MainLayout({
         </SignedIn>
       </header>
       {children}
+      <Script async src="https://js.stripe.com/v3/pricing-table.js"></Script>
     </div>
   )
 }
